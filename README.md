@@ -31,6 +31,8 @@ In micro-banking operations, financial fraud and data exfiltration occur most fr
   - Financial Kiosk: `ATM-Kiosk-01`
   - Surveillance Host: `Vault-NVR-Recorder`
   - Remote HQ Core System: `HQ-Core-Banking` (`10.100.100.10/24`)
+
+  ![Local Micro-Bank Infrastructure Topology](https://raw.githubusercontent.com/fiaz443/-Local-Micro-Bank-Sub-Branch-Cashier-Vault-Infrastructure/main/file_cisco-packet-tracer-image.png)
  
 ### Network Addressing & VLAN Segmentation
 
