@@ -26,7 +26,7 @@ In micro-banking operations, financial fraud and data exfiltration occur most fr
 - **Security Edge Router:** Cisco 2911 (`Bank-Gateway`)
 - **Hardened Access/Distribution Switch:** Cisco 2960-24TT (`Branch-Core-SW`)
 - **End-Devices:**
-  - Cashier Workstations: `Teller-01`, `Teller-02`
+  - Cashier Workstations: `Cashier-01`, `Cashier-02`
   - Operations Management: `Branch-Manager`
   - Financial Kiosk: `ATM-Kiosk-01`
   - Surveillance Host: `Vault-NVR-Recorder`
@@ -38,7 +38,7 @@ In micro-banking operations, financial fraud and data exfiltration occur most fr
 
 | VLAN ID | Name / Segment | Subnet | Gateway | Description |
 | :---: | :--- | :--- | :--- | :--- |
-| **10** | `Teller-Data` | `192.168.10.0/24` | `192.168.10.1` | Teller Workstations (Teller-01, Teller-02) |
+| **10** | `Cashier-Data` | `192.168.10.0/24` | `192.168.10.1` | Cashier Workstations (Cashier-01, Cashier-02) |
 | **20** | `Management` | `192.168.20.0/24` | `192.168.20.1` | Branch Manager Terminal |
 | **30** | `ATM-Network` | `192.168.30.0/24` | `192.168.30.1` | ATM Kiosk Transaction Line |
 | **40** | `Surveillance` | `192.168.40.0/24` | `192.168.40.1` | Vault NVR & Security Feeds |
@@ -48,7 +48,7 @@ In micro-banking operations, financial fraud and data exfiltration occur most fr
 
 | Device | Interface | Mode | Target / Assigned VLAN |
 | :--- | :--- | :---: | :--- |
-| **Branch-Core-SW** | `Fa0/1 - Fa0/2` | Access | VLAN 10 (`Teller-01 / 02`) |
+| **Branch-Core-SW** | `Fa0/1 - Fa0/2` | Access | VLAN 10 (`Cashier-01 / 02`) |
 | **Branch-Core-SW** | `Fa0/3` | Access | VLAN 20 (`Branch-Manager`) |
 | **Branch-Core-SW** | `Fa0/4` | Access | VLAN 30 (`ATM-Kiosk-01`) |
 | **Branch-Core-SW** | `Fa0/5` | Access | VLAN 40 (`Vault-NVR`) |
