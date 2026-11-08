@@ -89,10 +89,8 @@ interface FastEthernet0/3
  switchport port-security mac-address sticky
  switchport port-security violation restrict
 
-2. Router-on-a-Stick & Sub-Interfaces (Bank-Gateway)
-
-
- interface GigabitEthernet0/0
+**### 2. 2. Router-on-a-Stick & Sub-Interfaces (Bank-Gateway)**
+interface GigabitEthernet0/0
  no shutdown
 !
 interface GigabitEthernet0/0.10
@@ -110,8 +108,8 @@ interface GigabitEthernet0/0.30
 interface GigabitEthernet0/0.40
  encapsulation dot1Q 40
  ip address 172.20.40.1 255.255.255.0
- 
-3. Extended Access Control Lists (ACL Enforcement)
+
+ **### 3. Extended Access Control Lists (ACL Enforcement)**
 
  ! Strict ATM Pipeline Filtering (Applied inbound on VLAN 30 sub-interface)
 ip access-list extended ATM_ISOLATION_ACL
@@ -134,7 +132,7 @@ interface GigabitEthernet0/0.30
 interface GigabitEthernet0/1  ! WAN Interface to HQ
  ip access-group WAN_EGRESS_FILTER out
 
- ## 🧪 Verification & Audit Validation
+## 🧪 Verification & Audit Validation
 
 | Test Case | Scenario / Execution | Expected Result | Status |
 | :---: | :--- | :--- | :---: |
