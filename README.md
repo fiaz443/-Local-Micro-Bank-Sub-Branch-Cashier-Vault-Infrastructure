@@ -32,4 +32,16 @@ In micro-banking operations, financial fraud and data exfiltration occur most fr
   - Surveillance Host: `Vault-NVR-Recorder`
   - Remote HQ Core System: `HQ-Core-Banking` (`10.100.100.10/24`)
  
-
+[Teller-01 / 02]      [Branch-Manager]      [ATM-Kiosk-01]      [Vault-NVR]
+(VLAN 10)              (VLAN 20)             (VLAN 30)          (VLAN 40)
+\                      |                     |                 /
+\                     |                     |                /
++------------------------------------------------------------------+
+|                   Branch-Core-SW (Cisco 2960)                    |
++------------------------------------------------------------------+
+| (802.1Q Trunk)
++------------------------------------------------------------------+
+|                    Bank-Gateway (Cisco 2911)                     |
++------------------------------------------------------------------+
+| (WAN: 10.255.0.0/30)
+[HQ-Core-Banking]
